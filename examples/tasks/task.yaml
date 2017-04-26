@@ -1,0 +1,18 @@
+---
+  version: 1
+  schedule:
+    type: "simple"
+    interval: "1s"
+  max-failures: 10
+  workflow:
+    collect:
+      metrics:
+        /intel/procfs/cpu/*/utilization_percentage: {}
+      process:
+        - plugin_name: "change-detector"
+          config:
+            rules : "/intel/procfs/cpu/.*/utilization_percentage"
+          publish:
+            - plugin_name: "file"
+              config:
+                file: "/tmp/cpu_change_detector.log"
