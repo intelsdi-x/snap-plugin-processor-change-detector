@@ -30,7 +30,7 @@ const (
 	// Name of plugin
 	Name = "change-detector"
 	// Version of plugin
-	Version = 1
+	Version = 2
 )
 
 // ChangeDetectorProcessor implements plugin interface
