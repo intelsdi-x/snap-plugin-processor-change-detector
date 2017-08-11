@@ -52,7 +52,7 @@ This builds the plugin in `./build/`
 The intention of this plugin is to detect changes between current and previous values of metrics.
 Current value of metric is set as a metric's data, previous value of metric is saved in tag for metric.
 
-The plugin can be configured by following parameters (all parameters are optional):
+The plugin can be configured by following parameters:
 - `rules` - regular expressions which are used to select metrics in which changes need to be detected, regular expressions are separeted by `|`.
 
 Notice: Special characters in regular expressions needs to be escaped.
